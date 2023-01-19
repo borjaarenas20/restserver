@@ -22,11 +22,12 @@ class Server {
   async conectarDB() {
     await dbConnection();
   }
+
   middlewares() {
     // CORS
     this.app.use(cors());
 
-    // Lectyra y parseo del body
+    // Lectura y parseo del body
     this.app.use(express.json());
 
     // Directorio publico
